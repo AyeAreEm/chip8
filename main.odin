@@ -62,7 +62,7 @@ chip_init :: proc() -> (Chip, bool) {
     chip := Chip{}
     copy(chip.memory[FONT_ADDRESS:FONT_ADDRESS + FONT_SIZE], font)
 
-	file, file_err := os.open("./rom/INVADERS")
+	file, file_err := os.open("./rom/PONG")
 	if file_err != os.ERROR_NONE {
 		fmt.println("failed to open rom file")
 		os.close(file)
